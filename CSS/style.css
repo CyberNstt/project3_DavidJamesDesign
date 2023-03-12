@@ -66,15 +66,30 @@ body * {
 	font-size: 13px;
 	color: #252525;
 }
+h1 {
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 500;
+	letter-spacing: 4.608px;
+	margin-bottom: 24.5px;
+	padding: 13px 0;
+}
 h2 {
 	font-size: 48px;
 	font-weight: 700;
 	letter-spacing: 3.072px;
 }
+.HeaderLimiterLogoAndNav > a {
+	font-size: 36px;
+	line-height: 38px;
+	letter-spacing: 2.304px;
+}
 .LimiterAll {
+	min-height: 100%;
 	background: #FEFEFE;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	overflow: hidden;
 }
 .Limiter {
@@ -84,6 +99,9 @@ h2 {
 .Header {
 	background: url('../Imgs/Header/Background.jpg') center/cover no-repeat;
 	padding: 74px 10px 19px;
+}
+.Otherpages_Header {
+	padding: 10px;
 }
 .Header * {
 	color: #FFF;
@@ -106,6 +124,9 @@ h2 {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 15.5vw;
+}
+.Otherpages_HeaderLimiterLogoAndNav {
+	margin: 0;
 }
 .HeaderLimiterLogoAndNav p {
 	font-size: 30px;
@@ -139,13 +160,8 @@ h2 {
 .HeaderLimiterNav ul li a:hover::after {
 	width: 100%;
 }
-.HeaderLimiterTitle h1 {
-	text-align: center;
-	font-size: 4vw;
-	font-weight: 500;
-	letter-spacing: 4.608px;
-	margin-bottom: 24.5px;
-	padding: 13px 0;
+.HeaderLimiterNav .Active a::after {
+	width: 100%;
 }
 .HeaderLimiterTitle h2 {
 	text-align: center;
@@ -218,7 +234,7 @@ h2 {
 		display: block;
 		margin-bottom: 5.3vw;
 	}
-	.HeaderLimiterLogoAndNav p {
+	.HeaderLimiterLogoAndNav > a {
 		font-size: 4vw;
 		position: absolute;
 		left: 10px;
@@ -330,7 +346,7 @@ h2 {
 /*Services*/
 .Services {
 	background: #FBFBFB;
-	padding: 7.16666vw 5px 7.555555vw;
+	padding: 7.16666vw 10px 7.555555vw;
 }
 .ServicesLimiter {
 	max-width: 1171px;
@@ -452,6 +468,9 @@ h2 {
 /*Works*/
 .Works {
 	padding: 8.1111111vw 10px 9.6111111vw;
+}
+.Works_Works {
+	padding-bottom: 0;
 }
 .Works h3 {
 	font-size: 48px;
@@ -635,6 +654,12 @@ h2 {
 		padding: 7px 20px;
 		border-radius: 15px;
 	}
+	.Works_Works {
+		padding: 70px 10px 30px;
+	}
+	.WorksLimiterFlex .Works_WorksLimiterFlexLeftHead {
+		padding: 10px 5px 50px;
+	}
 }
 @media (max-width: 768px) {
 	.WorksLimiterFlex > div {
@@ -686,7 +711,7 @@ h2 {
 /*Team*/
 .Team {
 	background: #FBFBFB;
-	padding: 7.166667vw 4px 9.2777778vw;
+	padding: 7.166667vw 10px 9.2777778vw;
 }
 .Team h2 {
 	margin-bottom: 4.11111vw;
@@ -711,6 +736,7 @@ h2 {
 	position: relative;
 	background-position: center center;
 	background-size: cover;
+	overflow: hidden;
 }
 .TeamLimiterFlex > div:nth-child(2) {
 	margin: 14px 28px;
@@ -749,8 +775,8 @@ h2 {
 }
 .TeamLimiterFlexTom:hover p, .TeamLimiterFlexTim:hover p, .TeamLimiterFlexMichael:hover .TeamLimiterFlexMichaelTextarea {
 	top: 0;
-	height: 100%;
 	opacity: 0.6;
+	height: 100%;
 }
 .TeamLimiterFlexMichaelTextarea h3 {
 	margin-bottom: 16.9px;
@@ -786,8 +812,21 @@ h2 {
 }
 /*--TheTeam--*/
 /*David*/
+.About_David {
+	opacity: 0;
+	animation: appearenceDavid 0.5s linear 0s 1;
+	animation-fill-mode: forwards;
+}
+@keyframes appearenceDavid {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 .David {
-	padding: 117px 5px 129px;
+	padding: 117px 10px 129px;
 }
 .DavidLimiter::after {
 	content: '';
@@ -836,9 +875,8 @@ h2 {
 	background: #FFF;
 	border-radius: 50%;
 }
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after::after {
-	content: '';
-	display: none;
+.DavidLimiterSlider button {
+	position: relative;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
 	content: '';
@@ -857,7 +895,19 @@ h2 {
 	align-items: center;
 }
 .DavidLimiterSlider button {
-	background: #FFF;
+	background: transparent;
+}
+@media (max-width: 768px) {
+	.DavidLimiterSlider {
+		justify-content: center;
+	}
+	.DavidLimiterSlider button {
+		margin: 10px 13vw 0;
+		background: #70BF73;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+	}
 }
 /*--David--*/
 /*Contact*/
@@ -872,6 +922,7 @@ h2 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 0 10px;
 }
 .ContactLimiterFlex img {
 	width: 25px;
@@ -923,10 +974,12 @@ h2 {
 /*--Contact--*/
 /*Footer*/
 .Footer {
-	justify-self: flex-end;
 	background: #2E2E2E;
-	padding: 142px 0 0;
+	padding: 142px 10px 0;
 	text-align: center;
+}
+.Otherpages_Footer {
+	padding: 20px 0 0;
 }
 .FooterInfo {
 	display: flex;
@@ -959,6 +1012,9 @@ h2 {
 }
 .FooterLinks a:hover img {
 	opacity: 1;
+}
+.Otherpages_FooterLinks {
+	margin-bottom: 10px;
 }
 .FooterCopyright {
 	background: #252525;
