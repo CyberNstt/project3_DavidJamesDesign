@@ -837,29 +837,31 @@ h2 {
 	letter-spacing: 1.15px;
 	background: rgba(255, 255, 255, 0.5);
 	position: absolute;
+	height: 100%;
 	top: 88.5%;
 	left: 0;
 	transition: 0.3s ease-in-out;
 }
-.TeamLimiterFlexTom p, .TeamLimiterFlexTim p, .TeamLimiterFlexMichaelTextarea h3, .TeamLimiterFlexMichaelTextarea h4 {
+.TeamLimiterFlexTom p, .TeamLimiterFlexTim p,
+.TeamLimiterFlexMichaelTextarea h3, .TeamLimiterFlexMichaelTextarea h4 {
 	font-weight: 300;
 }
 .TeamLimiterFlexMichael {
 	background: url('../Imgs/TheTeam/MichaelFraup.jpg');
 }
 .TeamLimiterFlexMichaelTextarea {
-	background: #FFFFFF;
-	opacity: 0.92;
+	background: rgba(255, 255, 255, 0.92);
 	padding: 19px 0 30px;
 	position: absolute;
+	height: 100%;
 	top: 64.6%;
 	left: 0;
-	transition: 0.3s;
+	transition: 0.3s ease-in-out;
 }
-.TeamLimiterFlexTom:hover p, .TeamLimiterFlexTim:hover p, .TeamLimiterFlexMichael:hover .TeamLimiterFlexMichaelTextarea {
+.TeamLimiterFlexTom:hover p, .TeamLimiterFlexTim:hover p,
+.TeamLimiterFlexMichael:hover .TeamLimiterFlexMichaelTextarea {
 	top: 0;
-	opacity: 0.6;
-	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
 }
 .TeamLimiterFlexMichaelTextarea h3 {
 	margin-bottom: 16.9px;
