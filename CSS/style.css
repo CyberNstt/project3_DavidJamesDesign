@@ -97,19 +97,38 @@ h2 {
 	margin: 0 auto;
 }
 .Header {
-	background: url('../Imgs/Header/Background.jpg') center/cover no-repeat;
+	background-image: url('../Imgs/Header/Background.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 74px 10px 19px;
 }
+.headerAllAnimation {
+	transition: 0.6s;
+}
+.HeaderBg2 {
+	background-image: url('../Imgs/Header/Background2.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 74px 10px 19px;
+}
+.HeaderBg3 {
+	background-image: url('../Imgs/Header/Background3.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 74px 10px 19px;
+}
+
 .Otherpages_Header {
 	padding: 10px;
-}
-.Header * {
-	color: #FFF;
 }
 .HeaderLimiter * {
 	opacity: 0;
 	animation: appearence 0.5s linear 0s 1;
 	animation-fill-mode: forwards;
+	color: #FFF;
 }
 @keyframes appearence {
 	from {
@@ -123,7 +142,7 @@ h2 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 15.5vw;
+	margin-bottom: min(15.5vw, 250px);
 }
 .Otherpages_HeaderLimiterLogoAndNav {
 	margin: 0;
@@ -183,7 +202,7 @@ h2 {
 	font-weight: 700;
 	letter-spacing: 1.152px;
 	background: transparent;
-	transition: 0.1s ease-in-out;
+	transition: 0.1s;
 	margin-top: 17.9166666vw;
 }
 .HeaderLimiterSlider button:hover {
@@ -273,6 +292,7 @@ h2 {
 /*WeAre*/
 .WeAre {
 	padding: 8.27777vw 10px 6.5vw;
+	animation: appearence 0.5s linear 0s 1;
 }
 .WeAreLimiterBody {
 	background: url('../Imgs/WeAre/Face.jpg') 17.93% 0/309px no-repeat,
@@ -496,11 +516,11 @@ h2 {
 .WorksLimiterFlex {
 	display: flex;
 }
-.WorksLimiterFlex a {
-	padding: 1.5px 10px;
+.WorksLimiterFlex a, .WorksLimiterFlex button {
+	padding: 5px 15px;
 	transition: 0.3s;
 }
-.WorksLimiterFlex a:hover {
+.WorksLimiterFlex a:hover, .WorksLimiterFlex button:hover {
 	background: #AAA;
 	border-radius: 15px;
 	text-decoration: none;
@@ -523,21 +543,58 @@ h2 {
 	background: #252525;
 	margin: 30px 0 51px;
 }
-.WorksLimiterFlexLeftHeadLinks {
+.WorksLimiterFlexLeftHeadFilter {
 	display: flex;
 	justify-content: space-between;
 }
-.WorksLimiterFlexLeftHeadLinks a {
+.WorksLimiterFlexLeftHeadFilter button {
 	font-family: 'Open Sans';
 	line-height: 15px;
 	letter-spacing: 0.83px;
+	background: transparent;
+}
+.worksFilterBtn {
 	opacity: 0.3;
 }
-.WorksLimiterFlexLeftHeadLinks .WorksLimiterFlexLeftHeadLinksActive {
+.worksFilterBtn:hover {
 	opacity: 1;
 }
-.WorksLimiterFlexLeftHeadLinks a:hover {
+.worksButtonActive {
 	opacity: 1;
+	color: #252525;
+}
+.WorksScriptHide {
+	animation: hideFilter 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes hideFilter {
+	0% {
+		padding: 14.888888vw 0 7.6111111vw;
+		width: 100%;
+		height: auto;
+	}
+	100% {
+		width: 0;
+		height: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+}
+.WorksScriptAppear {
+	animation: appearFilter 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes appearFilter {
+	0% {
+		width: 0;
+		height: 0;
+		padding: 0;
+	}
+	100% {
+		padding: 14.888888vw 0 7.6111111vw;
+		width: 100%;
+		height: auto;
+	}
 }
 .WorksLimiterFlexLeft h4 {
 	padding-left: 29.441624%;
@@ -568,11 +625,12 @@ h2 {
 .WorksLimiterFlexLeftApple {
 	background: url('../Imgs/LatestWorks/NoteBook.jpg');
 	background-position: 0 0;
-	padding: 14.888888vw 0 5.4444444vw;
+	padding: 14.888888vw 0 7.6111111vw;
+	;
 }
 .WorksLimiterFlexLeftApple h3 {
 	width: 240px;
-	margin: 0 -19px 3.166667vw auto;
+	margin: 0 0 3.166667vw auto;
 }
 .WorksLimiterFlexLeftApple h4 {
 	margin-bottom: 1.111111vw;
@@ -590,7 +648,7 @@ h2 {
 	text-align: right;
 }
 .WorksLimiterFlexRightCam {
-	padding: 14.555556vw 0 9.611111vw;
+	padding: 14.888888vw 0 7.6111111vw;
 	background: url('../Imgs/LatestWorks/Cam.jpg');
 	background-position: top right;
 }
@@ -599,7 +657,7 @@ h2 {
 	margin-bottom: 3.555556vw;
 }
 .WorksLimiterFlexRightMac {
-	padding: 14.77778vw 0 173px;
+	padding: 14.77778vw 0 341px;
 	background: url('../Imgs/LatestWorks/AppleMac.jpg');
 	background-position: top right;
 }
@@ -608,20 +666,36 @@ h2 {
 	margin-bottom: 3.5vw;
 }
 .WorksLimiterFlexRightLink {
-	height: 168px;
-	position: relative;
+	width: 90px;
+	margin: 0 0 0 auto;
 }
-.WorksLimiterFlexRightLink a {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	letter-spacing: 2px;
+.linkHide {
+	display: none;
 }
 .WorksLimiterFlexRight .WorksLimiterFlexRightLink a {
-	padding: 5px 10px;
-	transition: 0.3s;
+	padding: 4px 0 6px;
+	text-align: center;
+	display: block;
+	width: 100%;
+	letter-spacing: 2px;
 }
 @media (max-width: 1024px) {
+	.WorksLimiterFlex a, .WorksLimiterFlex button {
+		background: #AAA;
+		border-radius: 15px;
+		text-decoration: none;
+	}
+	.WorksLimiterFlex a:hover, .WorksLimiterFlex button:hover {
+		background: #AAA;
+		border-radius: 15px;
+		text-decoration: none;
+	}
+	.WorksLimiterFlexLeftHeadFilter button {
+		opacity: 0.3;
+	}
+	.WorksLimiterFlexLeftHeadFilter button:hover {
+		opacity: 0.3;
+	}
 	.WorksLimiterFlex {
 		flex-direction: column;
 		align-items: center;
@@ -629,13 +703,17 @@ h2 {
 	.WorksLimiterFlex > div {
 		width: 70%;
 	}
-	.WorksLimiterFlex h4, .WorksLimiterFlex p, .WorksLimiterFlexLeftKitty a, .WorksLimiterFlexRightLink a {
-		color: #2E2E2E;
-		text-align: center;
-		padding: 0;
-		margin: 0 0 5.870841%;
+	.WorksLimiterFlex h4, .WorksLimiterFlex p, .WorksLimiterFlexLeftKitty a {
 		display: block;
 		width: 100%;
+		padding: 0;
+		margin: 0 auto 5.870841%;
+		color: #2E2E2E;
+		text-align: center;
+	}
+	.WorksLimiterFlexLeftKitty a {
+		padding: 5px 0;
+		width: 100px;
 	}
 	.WorksLimiterFlex > div > div {
 		padding: 150px 0 70px;
@@ -644,21 +722,21 @@ h2 {
 	.WorksLimiterFlex .WorksLimiterFlexLeft .WorksLimiterFlexLeftKitty {
 		padding-top: 106px;
 	}
-	.WorksLimiterFlexLeftHeadLinks {
+	.WorksLimiterFlexLeftHeadFilter {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	.WorksLimiterFlexLeftHeadLinks a {
+	.WorksLimiterFlexLeftHeadFilter button {
 		margin: 5px 10px;
 		background: #C2C2C2;
 		padding: 7px 20px;
 		border-radius: 15px;
 	}
-	.Works_Works {
-		padding: 70px 10px 30px;
-	}
 	.WorksLimiterFlex .Works_WorksLimiterFlexLeftHead {
 		padding: 10px 5px 50px;
+	}
+	.WorksLimiterFlexRightLink {
+		margin: 0 auto;
 	}
 }
 @media (max-width: 768px) {
@@ -682,27 +760,9 @@ h2 {
 	.WorksLimiterFlex h4, .WorksLimiterFlex p {
 		margin-bottom: 80px;
 	}
-	.WorksLimiterFlex .WorksLimiterFlexRight .WorksLimiterFlexRightLink {
-		padding: 50px 0 0 0;
-		height: auto;
-		display: flex;
-		justify-content: center;
-	}
-	.WorksLimiterFlex .WorksLimiterFlexRight .WorksLimiterFlexRightLink a {
-		display: inline-block;
-		width: auto;
-		position: relative;
-		margin: 0 auto;
-		padding: 0px 15px 5px;
-		top: 0;
-		left: 0;
-		font-size: 24px;
-		background: #CCC;
-		border-radius: 15px;
-	}
 }
 @media (max-width: 465px) {
-	.WorksLimiterFlexLeftHeadLinks {
+	.WorksLimiterFlexLeftHeadFilter {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -869,12 +929,33 @@ h2 {
 	width: 111px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row-reverse;
 }
-.DavidLimiterStars button {
-	background: #FFF;
-	border-radius: 50%;
+/*
+.DavidLimiterStars[data-totalRatingBtn="1"] .DavidLimiterStarsButton:nth-child(n + 5),
+.DavidLimiterStars[data-totalRatingBtn="2"] .DavidLimiterStarsButton:nth-child(n + 4),
+.DavidLimiterStars[data-totalRatingBtn="3"] .DavidLimiterStarsButton:nth-child(n + 3),
+.DavidLimiterStars[data-totalRatingBtn="4"] .DavidLimiterStarsButton:nth-child(n + 2),
+.DavidLimiterStars[data-totalRatingBtn="5"] .DavidLimiterStarsButton:nth-child(n + 1) {
+	opacity: 1;
 }
+*/
+.DavidLimiterStarsButton {
+	background: url('../Imgs/David/star.svg') center center / 15px 19px no-repeat;
+	width: 20%;
+	height: 19px;
+	transition: 0.3s;
+}
+.DavidLimiterStars:hover .DavidLimiterStarsButton {
+	opacity: 0.2;
+}
+.DavidLimiterStars .DavidLimiterStarsButton:first-child {
+	opacity: 0.2;
+}
+.DavidLimiterStars .DavidLimiterStarsButton:hover, .DavidLimiterStars .DavidLimiterStarsButton:hover ~ .DavidLimiterStarsButton {
+	opacity: 1;
+}
+
 .DavidLimiterSlider button {
 	position: relative;
 }
@@ -882,13 +963,7 @@ h2 {
 	content: '';
 	display: none;
 }
-.DavidLimiterStars button img {
-	width: 100%;
-	height: 100%;
-}
-.DavidLimiterStars button:last-child {
-	opacity: 0.2;
-}
+
 .DavidLimiterSlider {
 	display: flex;
 	justify-content: space-between;
@@ -940,10 +1015,10 @@ h2 {
 	letter-spacing: 1.56px;
 	opacity: 0.8;
 	background: transparent;
-	text-shadow: 1px 3px 10px #000;
+	text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
 }
 .ContactLimiterFlex button:hover {
-	text-decoration: underline;
+	text-decoration: 2px solid #7e7e7e underline;
 }
 .ContactLimiterFlexLeft * {
 	color: #373737;
@@ -975,7 +1050,7 @@ h2 {
 /*Footer*/
 .Footer {
 	background: #2E2E2E;
-	padding: 142px 10px 0;
+	padding: 7.8888vw 10px 0;
 	text-align: center;
 }
 .Otherpages_Footer {
@@ -1004,7 +1079,7 @@ h2 {
 	width: 132px;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 82px;
+	margin-bottom: 4.55555vw;
 }
 .FooterLinks a img {
 	opacity: 0.3;
