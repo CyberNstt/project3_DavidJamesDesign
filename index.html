@@ -14,12 +14,13 @@
 		rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+	<link rel="icon" type="image/x-icon" href="Imgs/hedgehog56.png">
 </head>
 
 <body>
 	<div class="LimiterAll">
 
-		<header class="Header">
+		<header class="Header headerAllAnimation">
 
 			<div class="HeaderLimiter Limiter">
 				<div class="HeaderLimiterLogoAndNav">
@@ -41,9 +42,9 @@
 				</div>
 
 				<div class="HeaderLimiterSlider">
-					<button onclick="#" class="HeaderLimiterSliderActive">01</button>
-					<button onclick="#">02</button>
-					<button onclick="#">03</button>
+					<button onclick="firstBackgroundF()" class="HeaderLimiterSliderBtn">01</button>
+					<button onclick="firstBackgroundS()" class="HeaderLimiterSliderBtn">02</button>
+					<button onclick="firstBackgroundTh()" class="HeaderLimiterSliderBtn">03</button>
 				</div>
 			</div>
 
@@ -108,30 +109,30 @@
 			</div>
 		</section>
 
-		<section class="Works">
+		<section class="Works" data-aos="fade-up">
 			<div class="WorksLimiter Limiter">
 				<div class="WorksLimiterFlex">
 					<div class="WorksLimiterFlexLeft">
 
 						<div class="WorksLimiterFlexLeftHead">
 							<h2>Latest Works</h2>
-							<div class="WorksLimiterFlexLeftHeadLinks">
-								<a target="_blank" class="WorksLimiterFlexLeftHeadLinksActive" href="Index.html">ALL</a>
-								<a target="_blank" href="Index.html">WEB DESIGN</a>
-								<a target="_blank" href="Index.html">BRANDING</a>
-								<a target="_blank" href="Index.html">PHOTOGRAPHY</a>
-								<a target="_blank" href="Index.html">ILLUSTRATION</a>
+							<div class="WorksLimiterFlexLeftHeadFilter">
+								<button class="worksFilterBtn worksButtonActive" data-f="all">ALL</button>
+								<button class="worksFilterBtn" data-f="webDesign">WEB DESIGN</button>
+								<button class="worksFilterBtn" data-f="branding">BRANDING</button>
+								<button class="worksFilterBtn" data-f="photography">PHOTOGRAPHY</button>
+								<button class="worksFilterBtn" data-f="illustration">ILLUSTRATION</button>
 							</div>
 						</div>
 
-						<div class="WorksLimiterFlexLeftKitty" data-aos="fade-right">
+						<div class="WorksLimiterFlexLeftKitty webDesign box">
 							<h3>A KITTEN’S LIFE</h3>
 							<h4>Photography</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							<a target="_blank" href="Index.html">READ MORE</a>
 						</div>
 
-						<div class="WorksLimiterFlexLeftApple" data-aos="fade-right">
+						<div class="WorksLimiterFlexLeftApple branding box">
 							<h3>APPLE’s LOST MAGIC</h3>
 							<h4>Photography</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -140,20 +141,20 @@
 					</div>
 					<div class="WorksLimiterFlexRight">
 
-						<div class="WorksLimiterFlexRightCam" data-aos="fade-left">
+						<div class="WorksLimiterFlexRightCam photography box">
 							<h3>100 YEARS PHOTOGRAPHY</h3>
 							<h4>Photography</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 
-						<div class="WorksLimiterFlexRightMac" data-aos="fade-left">
+						<div class="WorksLimiterFlexRightMac illustration box">
 							<h3>GROOVEMADE PRODUCTS FOR MAC</h3>
 							<h4>Photography</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 
 						<div class="WorksLimiterFlexRightLink">
-							<a target="_blank" href="Index.html" data-aos="fade-left">view more</a>
+							<a target="_blank" href="Index.html">view more</a>
 						</div>
 
 					</div>
@@ -166,11 +167,11 @@
 			<div class="TeamLimiter Limiter">
 				<h2>The Team</h2>
 				<div class="TeamLimiterFlex">
-					<div class="TeamLimiterFlexTom" data-aos="fade-up">
+					<div class="TeamLimiterFlexTom">
 						<p>TOM JONES</p>
 					</div>
 
-					<div class="TeamLimiterFlexMichael" data-aos="fade-down">
+					<div class="TeamLimiterFlexMichael">
 						<div class="TeamLimiterFlexMichaelTextarea">
 							<h3>MICHAEL FRAUP</h3>
 							<h4>Creative Director</h4>
@@ -178,7 +179,7 @@
 						</div>
 					</div>
 
-					<div class="TeamLimiterFlexTim" data-aos="fade-left">
+					<div class="TeamLimiterFlexTim">
 						<p>TIM CAHILL</p>
 					</div>
 				</div>
@@ -199,12 +200,12 @@
 							consequat. </p>
 						<div class="DavidLimiterImg"><img src="Imgs/David/quote-hand-drawn-symbol.svg" alt="99"></div>
 						<p class="DavidLimiterLink">DAVID JAMES <a target="_blank" href="https://djgd.co.uk/">/ Web Design</a></p>
-						<div class="DavidLimiterStars">
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
+						<div class="DavidLimiterStars" data-totalRatingBtn="4">
+							<button class="DavidLimiterStarsButton" data-ratingBtn="5"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="4"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="3"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="2"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="1"></button>
 						</div>
 					</div>
 					<div class="swiper-slide">
@@ -217,11 +218,11 @@
 						<div class="DavidLimiterImg"><img src="Imgs/David/quote-hand-drawn-symbol.svg" alt="99"></div>
 						<p class="DavidLimiterLink">DAVID JAMES <a target="_blank" href="https://djgd.co.uk/">/ Web Design</a></p>
 						<div class="DavidLimiterStars">
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="5"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="4"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="3"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="2"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="1"></button>
 						</div>
 					</div>
 					<div class="swiper-slide">
@@ -234,11 +235,11 @@
 						<div class="DavidLimiterImg"><img src="Imgs/David/quote-hand-drawn-symbol.svg" alt="99"></div>
 						<p class="DavidLimiterLink">DAVID JAMES <a target="_blank" href="https://djgd.co.uk/">/ Web Design</a></p>
 						<div class="DavidLimiterStars">
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
-							<button><img src="Imgs/David/star.svg" alt="star"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="5"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="4"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="3"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="2"></button>
+							<button class="DavidLimiterStarsButton" data-ratingBtn="1"></button>
 						</div>
 					</div>
 				</div>
@@ -251,12 +252,12 @@
 
 		<section class="Contact">
 			<div class="ContactLimiter ContactLimiterFlex">
-				<div class="ContactLimiterFlexLeft" data-aos="fade-right">
+				<div class="ContactLimiterFlexLeft">
 					<img src="Imgs/Contact/briefcase.svg" alt="briefcase">
 					<h3>Want to work together?</h3>
 					<button class="ContactLimiterFlexBigbtn" onclick="#">Amazing. Tell us about your project!</button>
 				</div>
-				<div class="ContactLimiterFlexRight" data-aos="fade-left">
+				<div class="ContactLimiterFlexRight">
 					<img src="Imgs/Contact/mail.svg" alt="mail">
 					<button class="ContactLimiterFlexLiketitle" onclick="#">Contact us</button>
 					<button class="ContactLimiterFlexBigbtn" onclick="#">Get in touch</button>
@@ -264,7 +265,7 @@
 			</div>
 		</section>
 
-		<footer class="Footer" data-aos="fade-up">
+		<footer class="Footer">
 			<div class="FooterInfo">
 				<p class="FooterAdress">3rd Floor, Santa Monica Beach, CA, San Francisco</p>
 				<p class="FooterMailAdress">(359) 0 123 456 789 - info@yourmail.com</p>
@@ -298,6 +299,7 @@
 				},
 			});
 		</script>
+		<script src="JS/mainScript.js"></script>
 	</div>
 </body>
 
