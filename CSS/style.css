@@ -70,7 +70,7 @@ h1 {
 	text-align: center;
 	font-size: 4vw;
 	font-weight: 500;
-	letter-spacing: 4.608px;
+	letter-spacing: 0.05vw;
 	margin-bottom: 24.5px;
 	padding: 13px 0;
 }
@@ -96,6 +96,11 @@ h2 {
 	max-width: 1182px;
 	margin: 0 auto;
 }
+.Appearence * {
+	opacity: 0;
+	animation: appearence 0.3s linear 0s 1;
+	animation-fill-mode: forwards;
+}
 .Header {
 	background-image: url('../Imgs/Header/Background.jpg');
 	background-position: center center;
@@ -104,6 +109,7 @@ h2 {
 	padding: 74px 10px 19px;
 }
 .headerAllAnimation {
+	min-height: 51vw;
 	transition: 0.6s;
 }
 .HeaderBg2 {
@@ -124,11 +130,10 @@ h2 {
 .Otherpages_Header {
 	padding: 10px;
 }
-.HeaderLimiter * {
+.OnlyIndexHeaderLimiter {
 	opacity: 0;
 	animation: appearence 0.5s linear 0s 1;
 	animation-fill-mode: forwards;
-	color: #FFF;
 }
 @keyframes appearence {
 	from {
@@ -137,6 +142,9 @@ h2 {
 	to {
 		opacity: 1;
 	}
+}
+.HeaderLimiter * {
+	color: #FFF;
 }
 .HeaderLimiterLogoAndNav {
 	display: flex;
@@ -191,26 +199,50 @@ h2 {
 	font-weight: 400;
 }
 .HeaderLimiterSlider {
-	width: 93px;
-	margin: 0 auto;
+	width: 124.1px;
+	height: 54px;
+	margin: 16.833333vw auto 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: flex-end;
 }
-.HeaderLimiterSlider button {
+.HeaderLimiterSliderBtn {
+	width: 21.5px;
+	text-align: center;
 	color: rgba(255, 255, 255, 0.437245);
 	font-size: 18px;
+	line-height: 18px;
 	font-weight: 700;
 	letter-spacing: 1.152px;
 	background: transparent;
-	transition: 0.1s;
-	margin-top: 17.9166666vw;
+	margin: 0 4.5px;
+	transition: 0.2s;
 }
-.HeaderLimiterSlider button:hover {
-	transform: scale(200%);
-	margin-top: 17.1166666vw;
+.HeaderLimiterSliderBtnActive {
+	width: 36.1px;
 	text-decoration: line-through #4CAF50 solid 2px;
 	color: #FFFFFF;
+	font-size: 36px;
+	line-height: 36px;
+	margin: 0 -2.8px;
 }
+.HeaderLimiterSlider:hover .HeaderLimiterSliderBtnActive {
+	width: 21.5px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.437245);
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0 4.5px;
+}
+.HeaderLimiterSlider .HeaderLimiterSliderBtn:hover {
+	width: 36.1px;
+	text-decoration: line-through #4CAF50 solid 2px;
+	color: #FFFFFF;
+	font-size: 36px;
+	line-height: 36px;
+	margin: 0 -2.8px;
+}
+
 @media (max-width: 1440px) {
 	.HeaderLimiterNav {
 		width: 40vw;
@@ -487,9 +519,10 @@ h2 {
 /*--Services--*/
 /*Works*/
 .Works {
-	padding: 8.1111111vw 10px 9.6111111vw;
+	padding: 8.1111111vw 10px 0;
 }
 .Works_Works {
+	min-height: 75vw;
 	padding-bottom: 0;
 }
 .Works h3 {
@@ -549,6 +582,7 @@ h2 {
 }
 .WorksLimiterFlexLeftHeadFilter button {
 	font-family: 'Open Sans';
+	font-size: min(1vw, 13px);
 	line-height: 15px;
 	letter-spacing: 0.83px;
 	background: transparent;
@@ -564,7 +598,7 @@ h2 {
 	color: #252525;
 }
 .WorksScriptHide {
-	animation: hideFilter 0.5s ease-in-out;
+	animation: hideFilter 0.3s ease-in-out;
 	animation-fill-mode: forwards;
 }
 @keyframes hideFilter {
@@ -684,17 +718,6 @@ h2 {
 		background: #AAA;
 		border-radius: 15px;
 		text-decoration: none;
-	}
-	.WorksLimiterFlex a:hover, .WorksLimiterFlex button:hover {
-		background: #AAA;
-		border-radius: 15px;
-		text-decoration: none;
-	}
-	.WorksLimiterFlexLeftHeadFilter button {
-		opacity: 0.3;
-	}
-	.WorksLimiterFlexLeftHeadFilter button:hover {
-		opacity: 0.3;
 	}
 	.WorksLimiterFlex {
 		flex-direction: column;
@@ -986,6 +1009,13 @@ h2 {
 }
 /*--David--*/
 /*Contact*/
+.Contact_Contact {
+	min-height: 76.1vh;
+	background: url('../Imgs/Header/Background.jpg') center center/cover fixed no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .ContactLimiterFlex {
 	display: flex;
 	text-align: center;
@@ -998,6 +1028,13 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	padding: 0 10px;
+}
+.Contact_ContactLimiter {
+	box-shadow: 0 5px 5px rgba(100, 100, 100, 0.7),
+		0 -2.5px 2.5px rgba(100, 100, 100, 0.7);
+}
+.Contact_ContactLimiter > div {
+	width: 50vw;
 }
 .ContactLimiterFlex img {
 	width: 25px;
@@ -1019,6 +1056,9 @@ h2 {
 }
 .ContactLimiterFlex button:hover {
 	text-decoration: 2px solid #7e7e7e underline;
+}
+.ContactLimiterFlexLeft {
+	background: #FFF;
 }
 .ContactLimiterFlexLeft * {
 	color: #373737;
