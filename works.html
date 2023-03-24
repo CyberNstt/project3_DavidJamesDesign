@@ -91,6 +91,7 @@
 			</div>
 		</section>
 
+
 		<footer class="Footer Otherpages_Footer">
 			<div class="FooterInfo">
 				<p class="FooterAdress">3rd Floor, Santa Monica Beach, CA, San Francisco</p>
@@ -108,6 +109,22 @@
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
 			AOS.init();
+		</script>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				pagination: {
+					el: ".swiper-pagination",
+					type: "progressbar",
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
 		</script>
 		<script src="JS/mainScript.js"></script>
 	</div>
