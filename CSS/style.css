@@ -594,7 +594,7 @@ h2 {
 }
 .WorksLimiterFlexLeftHeadFilter button {
 	font-family: 'Open Sans';
-	font-size: min(1vw, 13px);
+	font-size: 13px;
 	line-height: 15px;
 	letter-spacing: 0.83px;
 	background: transparent;
